@@ -348,7 +348,7 @@ public class BitcoinJob
 
         // calc share-diff
         Console.WriteLine("ShareMultiplier: " + shareMultiplier.ToString());
-        Console.WriteLine("HeaderHashInt: " + headerHash.ToBigInteger().ToString());
+        Console.WriteLine("HeaderHashInt: " + headerHash.ToBigInteger());
         var shareDiff = (double) new BigRational(BitcoinConstants.Diff1, headerHash.ToBigInteger()) * shareMultiplier;
         var stratumDifficulty = context.Difficulty;
         var ratio = shareDiff / stratumDifficulty;
